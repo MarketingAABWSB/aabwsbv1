@@ -103,9 +103,9 @@ export default function HomePage() {
           <div className={styles.heroBottom}>
             <div className={`${styles.heroBottomLeft} animate-fade-up-delay`}>
               <h2 className={styles.heroSubLeft}>{t('home.heroSubLeft')}</h2>
-              <Link href="/#footer" className="btn btn-primary" id="hero-contact-btn">
+              <a href="https://api.whatsapp.com/send/?phone=60172525306&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="btn btn-primary" id="hero-contact-btn">
                 {t('home.heroBtn')}
-              </Link>
+              </a>
             </div>
             <div className={`${styles.heroBottomRight} animate-fade-up-delay-2`}>
               <p className={styles.heroTextRight}>
