@@ -52,7 +52,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://wa.me/60172525306"
+              href="https://api.whatsapp.com/send?phone=60175934805&text=Hi%20Azam%20Auto.%20Saya%20nak%20buat%20booking%20temujanji%20pembaikan.%20Boleh%20bantu%20saya%3F"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}

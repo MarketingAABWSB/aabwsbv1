@@ -130,7 +130,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="https://api.whatsapp.com/send/?phone=60172525306&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send?phone=60175934805&text=Hi%20Azam%20Auto.%20Saya%20nak%20buat%20booking%20temujanji%20pembaikan.%20Boleh%20bantu%20saya%3F"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIcon}
