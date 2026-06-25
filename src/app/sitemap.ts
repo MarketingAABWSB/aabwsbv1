@@ -4,8 +4,8 @@ import { projects } from '@/data/projects';
 import { bulletinPosts } from '@/data/bulletin';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Use the environment variable for your production domain, or fallback to localhost
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  // Use the environment variable for your production domain, or fallback to the actual domain
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://azamauto.com';
 
   // List all your static routes here
   const routes = [
