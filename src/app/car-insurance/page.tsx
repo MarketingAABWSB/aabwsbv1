@@ -40,10 +40,13 @@ export default function CarInsurancePage() {
                 </div>
               ))}
             </div>
-            <div>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link href="/contact-us" className="btn btn-primary" id="insurance-enquire-btn">
                 {t('insurance.contactBtn')} &rarr;
               </Link>
+              <a href="https://insuransroadtaxazam.netlify.app/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" id="insurance-website-btn">
+                {lang === 'en' ? 'Visit Website' : 'Layari Laman Web'} &rarr;
+              </a>
             </div>
           </div>
         </div>

@@ -929,6 +929,27 @@
   box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
 }
 
+.websiteBtn {
+  background: var(--clr-accent);
+  color: #000;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.websiteBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--clr-accent-glow);
+}
+
 /* OBJECTIVE SECTION */
 .objectiveWrap {
   display: flex;

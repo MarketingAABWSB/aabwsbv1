@@ -8,6 +8,7 @@ import { services } from '@/data/services';
 import { branches } from '@/data/branches';
 import { projects } from '@/data/projects';
 import styles from './page.module.css';
+import { AnimateIn, StaggerContainer, StaggerItem } from '@/components/AnimateIn';
 
 const homeProjects = projects;
 
@@ -122,7 +123,7 @@ export default function HomePage() {
 
       {/* ── TENTANG KAMI (ASYMMETRICAL BENTO GRID) ──────────────────────── */}
       <section className="section" id="overview" style={{ background: 'var(--clr-bg)' }}>
-        <div className={`container ${styles.aboutSection}`}>
+        <AnimateIn className={`container ${styles.aboutSection}`}>
           <div className={styles.sectionHeaderCenter}>
             <span className="section-label">{lang === 'en' ? 'Company Overview' : 'Pengenalan Syarikat'}</span>
             <h2 className={styles.sectionTitleCenter}>
@@ -242,13 +243,13 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
+        </AnimateIn>
       </section>
 
 
       {/* ── PERKHIDMATAN KAMI (CAROUSEL) ──────────────── */}
       <section className={`section ${styles.patternBg}`} id="services">
-        <div className="container">
+        <AnimateIn className="container">
           <div className={styles.sectionHeaderCenter} style={{ marginBottom: '1.5rem' }}>
             <span className="section-label">{lang === 'en' ? 'What We Offer' : 'Tawaran Kami'}</span>
             <h2 className={styles.sectionTitleCenter}>
@@ -308,12 +309,12 @@ export default function HomePage() {
               {lang === 'en' ? 'View All Services' : 'Lihat Semua Perkhidmatan'} &rarr;
             </Link>
           </div>
-        </div>
+        </AnimateIn>
       </section>
 
       {/* ── CAWANGAN KAMI ─────────────────────── */}
       <section className="section" id="cawangan" style={{ background: 'var(--clr-bg-2)' }}>
-        <div className="container">
+        <AnimateIn className="container">
           <div className={styles.sectionHeaderCenter}>
             <span className="section-label">{lang === 'en' ? 'Our Network' : 'Rangkaian Kami'}</span>
             <h2 className={styles.sectionTitleCenter}>
@@ -322,9 +323,9 @@ export default function HomePage() {
             <div className="accent-divider" />
           </div>
 
-          <div className={styles.branchGrid}>
+          <StaggerContainer className={styles.branchGrid}>
             {branches.map((branch) => (
-              <div key={branch.id} className={styles.branchCard}>
+              <StaggerItem key={branch.id} className={styles.branchCard}>
                 <div className={styles.branchImageWrap}>
                   <Image 
                     src={branch.image} 
@@ -349,23 +350,33 @@ export default function HomePage() {
                   <div className={styles.branchPicSection}>
                     <span className={styles.specLabel}>Person In Charge:</span>
                     <p className={styles.picName}>{branch.pic}</p>
-                    <a href={branch.waLink} target="_blank" rel="noopener noreferrer" className={styles.waBtn}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                      </svg>
-                      {lang === 'en' ? 'WhatsApp Us' : 'Hubungi WhatsApp'}
-                    </a>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.5rem' }}>
+                      <a href={branch.waLink} target="_blank" rel="noopener noreferrer" className={styles.waBtn}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        {lang === 'en' ? 'WhatsApp Us' : 'Hubungi WhatsApp'}
+                      </a>
+                      {branch.websiteUrl && (
+                        <a href={branch.websiteUrl} target="_blank" rel="noopener noreferrer" className={styles.websiteBtn}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          {lang === 'en' ? 'Visit Website' : 'Layari Laman Web'}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
-        </div>
+          </StaggerContainer>
+        </AnimateIn>
       </section>
 
       {/* ── SEKSYEN PROJEK ────────────────── */}
       <section className={`section ${styles.patternBg}`} id="projek" style={{ borderTop: '1px solid var(--clr-border)' }}>
-        <div className="container">
+        <AnimateIn className="container">
           <div className={styles.sectionHeaderCenter}>
             <span className="section-label">{lang === 'en' ? 'Our Portfolio' : 'Portfolio Kami'}</span>
             <h2 className={styles.sectionTitleCenter}>
@@ -374,10 +385,11 @@ export default function HomePage() {
             <div className="accent-divider" />
           </div>
 
-          <div className={styles.branchGrid}>
+          <StaggerContainer className={styles.branchGrid}>
             {homeProjects.map((p) => (
-              <Link key={p.id} href={`/projek/${p.slug}`} style={{ textDecoration: 'none' }}>
-                <div className={styles.branchCard} style={{ background: 'var(--clr-bg)', cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
+              <StaggerItem key={p.id}>
+                <Link href={`/projek/${p.slug}`} style={{ textDecoration: 'none' }}>
+                  <div className={styles.branchCard} style={{ background: 'var(--clr-bg)', cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
                   <div className={styles.projectImageWrap}>
                     <Image 
                       src={p.image} 
@@ -392,10 +404,11 @@ export default function HomePage() {
                     <p className={styles.branchDesc} style={{ marginBottom: 0 }}>{p.desc[lang]}</p>
                   </div>
                 </div>
-              </Link>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
-        </div>
+          </StaggerContainer>
+        </AnimateIn>
       </section>
     </>
   );
