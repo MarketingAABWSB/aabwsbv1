@@ -135,6 +135,6 @@ export const branches: Branch[] = [
     mapUrl: 'https://maps.app.goo.gl/rG2a9wvnVyzL4pHC6',
     image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop',
     waLink: 'https://api.whatsapp.com/send?phone=60166707288&text=Hai.%20Saya%20nak%20tanya%20tentang%20insurance',
-    websiteUrl: 'https://insuransroadtaxazam.netlify.app/',
+    websiteUrl: 'https://7b44f53f.ins-aabwsw.pages.dev/',
   }
 ];
