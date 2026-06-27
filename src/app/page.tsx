@@ -83,15 +83,11 @@ export default function HomePage() {
       {/* ── HERO ──────────────────────────────── */}
       <section className={styles.hero}>
         <div className={styles.heroBg}>
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
+          <img 
+            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2000&auto=format&fit=crop" 
+            alt="Hero Background"
             className={styles.heroVideo}
-          >
-            <source src="/main-bg.mp4?v=2" type="video/mp4" />
-          </video>
+          />
           <div className={styles.heroOverlay} />
         </div>
         <div className={`container ${styles.heroInner}`}>
