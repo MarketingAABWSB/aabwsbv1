@@ -106,6 +106,64 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
               <div className={styles.body}>
                 <p style={{ whiteSpace: 'pre-line' }}>{service.fullDesc[lang]}</p>
               </div>
+
+              {/* External Link CTA */}
+              {service.externalLink && (
+                <div className={styles.ctaSection}>
+                  <a href={service.externalLink} target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
+                    {lang === 'en' ? 'Visit Our Dedicated Portal' : 'Layari Portal Khas Kami'}
+                    <span className={styles.ctaIcon}>&rarr;</span>
+                  </a>
+                </div>
+              )}
+
+              {/* Workflow Section */}
+              {service.workflow && (
+                <div className={styles.workflowSection}>
+                  <h3 className={styles.workflowTitle}>{service.workflow.title[lang]}</h3>
+                  <div className={styles.workflowGrid}>
+                    {service.workflow.steps.map((step, i) => (
+                      <div key={i} className={styles.workflowStep}>
+                        <div className={styles.stepNumber}>{i + 1}</div>
+                        <div className={styles.stepContent}>
+                          <h4 className={styles.stepTitle}>{step.title[lang]}</h4>
+                          <p className={styles.stepDesc}>{step.desc[lang]}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Table Section */}
+              {service.table && (
+                <div className={styles.tableSection}>
+                  <h3 className={styles.tableTitle}>{service.table.title[lang]}</h3>
+                  {service.table.description && (
+                    <p className={styles.tableDesc}>{service.table.description[lang]}</p>
+                  )}
+                  <div className={styles.tableWrapper}>
+                    <table className={styles.serviceTable}>
+                      <thead>
+                        <tr>
+                          {service.table.headers[lang].map((header, i) => (
+                            <th key={i}>{header}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {service.table.rows.map((row, i) => (
+                          <tr key={i}>
+                            {row[lang].map((cell, j) => (
+                              <td key={j}>{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
               
               {/* Gallery Section */}
               {service.gallery && service.gallery.length > 0 && (

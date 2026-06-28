@@ -13,6 +13,20 @@ export interface Service {
     en: { q: string; a: string }[];
     ms: { q: string; a: string }[];
   };
+  table?: {
+    title: { en: string; ms: string };
+    description?: { en: string; ms: string };
+    headers: { en: string[]; ms: string[] };
+    rows: { en: string[]; ms: string[] }[];
+  };
+  workflow?: {
+    title: { en: string; ms: string };
+    steps: {
+      title: { en: string; ms: string };
+      desc: { en: string; ms: string };
+    }[];
+  };
+  externalLink?: string;
 }
 
 export const services: Service[] = [
@@ -325,6 +339,201 @@ export const services: Service[] = [
         },
       ],
     },
+  },
+  {
+    slug: 'insurance',
+    icon: 'car',
+    title: {
+      en: 'Insurance',
+      ms: 'Insurans',
+    },
+    shortDesc: {
+      en: 'Renew your roadtax and insurance easier, faster, and more comfortably.',
+      ms: 'Menyediakan kemudahan pembaharuan roadtax dan insurans dengan lebih mudah, cepat dan selesa.',
+    },
+    fullDesc: {
+      en: 'As your Insurance & Roadtax Expert, we provide the convenience of renewing your roadtax and insurance easier, faster, and more comfortably. We assist you in the renewal process by offering an extensive selection of top insurance and takaful companies available in Malaysia, including Etiqa, Kurnia, and many more.\n\nTo further ease your financial affairs, we also offer easy and flexible installment payment options. With fast approval and a simple process, you can ensure your vehicle stays protected without any hassle.',
+      ms: 'Sebagai Pakar Insurans & Roadtax Anda, kami menyediakan kemudahan pembaharuan roadtax dan insurans dengan lebih mudah, cepat dan selesa. Kami membantu pelanggan dalam proses pembaharuan melalui pelbagai pilihan syarikat insurans dan takaful yang dipercayai di Malaysia, seperti Etiqa, Kurnia, dan pelbagai lagi.\n\nBagi memudahkan urusan kewangan anda, kami turut menawarkan pilihan bayaran secara ansuran yang mudah dan fleksibel. Dengan kelulusan pantas serta proses yang ringkas, anda boleh memastikan kenderaan anda sentiasa dilindungi tanpa sebarang kesulitan.',
+    },
+    externalLink: 'https://7b44f53f.ins-aabwsw.pages.dev/',
+    workflow: {
+      title: {
+        en: 'Renewal Process',
+        ms: 'Cara Pembaharuan',
+      },
+      steps: [
+        {
+          title: { en: 'Submit Vehicle Information', ms: 'Hantar Maklumat Kenderaan' },
+          desc: { en: 'Provide your registration number or a copy of the grant.', ms: 'Berikan nombor pendaftaran atau salinan geran.' }
+        },
+        {
+          title: { en: 'Receive Quotation', ms: 'Terima Sebutharga' },
+          desc: { en: 'We will prepare a quotation quickly and for free.', ms: 'Kami akan menyediakan sebut harga dengan pantas secara percuma.' }
+        },
+        {
+          title: { en: 'Choose Payment Method', ms: 'Pilih Kaedah Bayaran' },
+          desc: { en: 'Cash, online banking, or installments via SPayLater, Atome, and Direct Lending.', ms: 'Tunai, online banking atau ansuran menggunakan SPayLater, Atome dan Direct Lending.' }
+        },
+        {
+          title: { en: 'Renewal Complete', ms: 'Pembaharuan Selesai' },
+          desc: { en: 'Your roadtax and insurance are renewed easily.', ms: 'Roadtax dan insurans anda diperbaharui dengan mudah.' }
+        }
+      ]
+    },
+    features: {
+      en: [
+        'Fast & Comfortable: Quicker renewal without long queues',
+        'Free Quotation: Quotes provided for free without upfront fees',
+        'Flexible Transactions: Cash or online banking',
+        'Reminder Notifications: Get notified when your insurance expires',
+        'Flexible Installments: Pay via SPayLater, Atome, or Direct Lending'
+      ],
+      ms: [
+        'Pantas & Selesa: Pembaharuan lebih pantas tanpa beratur panjang',
+        'Sebutharga Percuma: Tiada bayaran pendahuluan diperlukan',
+        'Transaksi Fleksibel: Bayaran secara tunai atau online',
+        'Notifikasi Peringatan: Makluman tamat tempoh insurans',
+        'Ansuran Fleksibel: Bayar melalui SPayLater, Atome dan Direct Lending'
+      ]
+    },
+    faqs: {
+      en: [
+        {
+          q: 'Is there any upfront payment required for a quotation?',
+          a: 'No upfront payment is needed. Quotations are provided completely free of charge.',
+        },
+        {
+          q: 'What installment options do you accept?',
+          a: 'We accept installment payments through SPayLater, Atome, and Direct Lending for flexible and easy processing.',
+        },
+        {
+          q: 'Which insurance companies do you offer?',
+          a: 'We offer a wide range of choices including Etiqa, Kurnia, and various other insurance and takaful companies available in Malaysia.',
+        }
+      ],
+      ms: [
+        {
+          q: 'Adakah terdapat bayaran pendahuluan untuk sebutharga?',
+          a: 'Tiada bayaran pendahuluan diperlukan. Sebutharga insurans diberi secara percuma.',
+        },
+        {
+          q: 'Apakah pilihan bayaran ansuran yang diterima?',
+          a: 'Kami menerima bayaran ansuran yang mudah dan fleksibel melalui kemudahan SPayLater, Atome, dan Direct Lending.',
+        },
+        {
+          q: 'Syarikat insurans manakah yang ditawarkan?',
+          a: 'Kami menawarkan pelbagai pilihan termasuk Etiqa, Kurnia, dan pelbagai syarikat insurans serta takaful lain di Malaysia.',
+        }
+      ]
+    },
+    image: '/assets/insurans.jpg',
+  },
+  {
+    slug: 'rakan-towing',
+    icon: 'car',
+    title: {
+      en: 'Rakan Towing',
+      ms: 'Rakan Towing',
+    },
+    shortDesc: {
+      en: 'Comprehensive towing partner service with free inspection and transparent recommendations.',
+      ms: 'Perkhidmatan rakan towing komprehensif dengan pemeriksaan percuma dan cadangan yang telus.',
+    },
+    fullDesc: {
+      en: 'This is our comprehensive towing partner service. We prioritize transparency and honest service to give you the best experience.',
+      ms: 'Ini adalah perkhidmatan rakan towing kami yang komprehensif. Kami mengutamakan ketelusan dan perkhidmatan jujur untuk memberikan pengalaman terbaik kepada anda.',
+    },
+    workflow: {
+      title: {
+        en: 'Assessment & Transparency Workflow',
+        ms: 'Aliran Kerja Penilaian & Ketelusan',
+      },
+      steps: [
+        {
+          title: { en: 'Free Inspection', ms: 'Pemeriksaan Percuma' },
+          desc: { en: 'We provide a free 35-item checklist.', ms: 'Kami menyediakan pemeriksaan 35 item percuma (Checklist 35 item percuma).' },
+        },
+        {
+          title: { en: 'Honest Recommendations', ms: 'Cadangan Jujur' },
+          desc: { en: 'We make recommendations based strictly on the results of the 35-point check.', ms: 'Kami membuat cadangan berdasarkan sepenuhnya pada hasil pemeriksaan 35 poin tersebut.' },
+        },
+        {
+          title: { en: 'Strict SOP', ms: 'SOP Ketat' },
+          desc: { en: 'We prioritize transparency. We will inform the customer of any issues, and will repair only if the customer agrees.', ms: 'Kami mengutamakan ketelusan. Kami akan memaklumkan pelanggan tentang sebarang isu, dan hanya akan membaiki jika pelanggan bersetuju.' },
+        }
+      ]
+    },
+    features: {
+      en: [
+        'Free 35-item checklist inspection',
+        'Transparent and honest repair recommendations',
+        '50% Towing Discount (Maximum RM500)',
+        '6 Months Towing Protection from bill date',
+        'Fast breakdown assistance to Azam Auto branches'
+      ],
+      ms: [
+        'Pemeriksaan 35-item percuma',
+        'Cadangan pembaikan yang telus dan jujur',
+        'Diskaun Towing 50% (Maksimum RM500)',
+        'Perlindungan Towing 6 Bulan dari tarikh bil',
+        'Bantuan breakdown pantas ke cawangan Azam Auto'
+      ]
+    },
+    image: '/assets/towing.jpg',
+    table: {
+      title: {
+        en: 'Towing Eligibility & Terms',
+        ms: 'Kelayakan & Terma Towing',
+      },
+      description: {
+        en: 'Here is a breakdown of how a customer\'s decision on repairs affects their towing coverage:',
+        ms: 'Berikut adalah butiran bagaimana keputusan pelanggan mengenai pembaikan mempengaruhi perlindungan penundaan mereka:',
+      },
+      headers: {
+        en: ['Customer Decision', 'Towing Eligibility Status', 'Benefit'],
+        ms: ['Keputusan Pelanggan', 'Status Kelayakan Towing', 'Manfaat'],
+      },
+      rows: [
+        {
+          en: ['Declines Repairs ("If not accept")', 'Status: Tidak layak towing (Not eligible)', 'Not eligible for the special towing coverage.'],
+          ms: ['Tolak Pembaikan ("Jika tidak setuju")', 'Status: Tidak layak towing (Not eligible)', 'Tidak layak untuk perlindungan penundaan khas.']
+        },
+        {
+          en: ['Accepts Repairs ("If accept")', 'Status: Layak towing (Eligible)', 'Azam Auto provides fast breakdown assistance to our branches with 6 months of protection (from bill date). You receive a 50% towing discount (maximum RM500).'],
+          ms: ['Terima Pembaikan ("Jika setuju")', 'Status: Layak towing (Eligible)', 'Azam Auto menyediakan bantuan breakdown pantas ke cawangan kami dengan perlindungan selama 6 bulan (dari tarikh bil). Anda menerima diskaun towing 50% (maksimum RM500).']
+        }
+      ]
+    },
+    faqs: {
+      en: [
+        {
+          q: 'Do I have to pay for the initial vehicle inspection?',
+          a: 'No, we provide a free 35-item checklist inspection before making any repair recommendations.',
+        },
+        {
+          q: 'Will you proceed with repairs without my permission?',
+          a: 'No. Based on our strict SOP and priority for transparency, we will inform you of any issues and will repair only if you agree.',
+        },
+        {
+          q: 'What towing benefits do I get if I accept the repairs?',
+          a: 'By accepting repairs (passing the 35-item inspection), you become eligible for special coverage for 6 months. This includes fast breakdown assistance to our branches and a 50% towing discount (up to a maximum of RM500).',
+        }
+      ],
+      ms: [
+        {
+          q: 'Adakah saya perlu membayar untuk pemeriksaan awal kenderaan?',
+          a: 'Tidak, kami menyediakan pemeriksaan 35 item percuma (Checklist 35 item percuma) sebelum membuat sebarang cadangan pembaikan.',
+        },
+        {
+          q: 'Adakah kenderaan saya akan dibaiki tanpa kebenaran?',
+          a: 'Tidak. Berdasarkan SOP ketat kami yang mengutamakan ketelusan, kami akan memaklumkan sebarang isu dan hanya akan membaiki jika anda bersetuju.',
+        },
+        {
+          q: 'Apakah manfaat penundaan jika saya bersetuju dengan cadangan pembaikan?',
+          a: 'Apabila anda bersetuju dengan pembaikan (lulus pemeriksaan 35 item), anda layak menerima perlindungan khas selama 6 bulan. Ini termasuk bantuan breakdown pantas ke cawangan kami dan diskaun towing 50% (maksimum RM500).',
+        }
+      ]
+    }
   },
 ];
 

@@ -104,6 +104,181 @@
   font-size: 0.8rem;
 }
 
+/* CTA Section */
+.ctaSection {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--clr-accent);
+  color: #000;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 204, 0, 0.4);
+  background: #fff;
+  color: #000;
+}
+
+.ctaIcon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaBtn:hover .ctaIcon {
+  transform: translateX(5px);
+}
+
+/* Workflow Section */
+.workflowSection {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--clr-border);
+}
+
+.workflowTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-white);
+  margin-bottom: 1.5rem;
+}
+
+.workflowGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.workflowStep {
+  display: flex;
+  gap: 1.25rem;
+  background: var(--clr-bg-2);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.workflowStep:hover {
+  transform: translateY(-2px);
+  border-color: var(--clr-accent);
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  color: #000;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stepTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-white);
+}
+
+.stepDesc {
+  font-size: 0.9rem;
+  color: var(--clr-text-2);
+  line-height: 1.6;
+}
+
+/* Table Section */
+.tableSection {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--clr-border);
+}
+
+.tableTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-white);
+  margin-bottom: 0.75rem;
+}
+
+.tableDesc {
+  font-size: 0.95rem;
+  color: var(--clr-text-2);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  background: var(--clr-bg);
+}
+
+.serviceTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.serviceTable th {
+  background: var(--clr-bg-2);
+  color: var(--clr-white);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.serviceTable td {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--clr-text-2);
+  border-bottom: 1px solid var(--clr-border);
+  line-height: 1.6;
+}
+
+.serviceTable tr:last-child td {
+  border-bottom: none;
+}
+
+.serviceTable tr {
+  transition: background 0.3s ease;
+}
+
+.serviceTable tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--clr-text);
+}
+
 /* Gallery */
 .gallerySection {
   margin-top: 2rem;
