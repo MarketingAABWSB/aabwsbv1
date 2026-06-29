@@ -432,37 +432,18 @@ export const services: Service[] = [
     slug: 'rakan-towing',
     icon: 'car',
     title: {
-      en: 'Rakan Towing',
-      ms: 'Rakan Towing',
+      en: 'Rakan Towing Azam Auto',
+      ms: 'Rakan Towing Azam Auto',
     },
     shortDesc: {
       en: 'Comprehensive towing partner service with free inspection and transparent recommendations.',
       ms: 'Perkhidmatan rakan towing komprehensif dengan pemeriksaan percuma dan cadangan yang telus.',
     },
     fullDesc: {
-      en: 'This is our comprehensive towing partner service. We prioritize transparency and honest service to give you the best experience.',
-      ms: 'Ini adalah perkhidmatan rakan towing kami yang komprehensif. Kami mengutamakan ketelusan dan perkhidmatan jujur untuk memberikan pengalaman terbaik kepada anda.',
+      en: 'Rakan Towing Azam Auto is a special service for Azam Auto customers offering a 50% Towing Discount (Maximum RM500) to provide you with convenience and peace of mind on the road.',
+      ms: 'Rakan Towing Azam Auto adalah perkhidmatan istimewa kepada pelanggan Azam Auto yang menawarkan Diskaun Towing 50% (Maksimum RM500) bagi memberikan kemudahan dan ketenangan kepada anda di jalan raya.',
     },
-    workflow: {
-      title: {
-        en: 'Assessment & Transparency Workflow',
-        ms: 'Aliran Kerja Penilaian & Ketelusan',
-      },
-      steps: [
-        {
-          title: { en: 'Free Inspection', ms: 'Pemeriksaan Percuma' },
-          desc: { en: 'We provide a free 35-item checklist.', ms: 'Kami menyediakan pemeriksaan 35 item percuma (Checklist 35 item percuma).' },
-        },
-        {
-          title: { en: 'Honest Recommendations', ms: 'Cadangan Jujur' },
-          desc: { en: 'We make recommendations based strictly on the results of the 35-point check.', ms: 'Kami membuat cadangan berdasarkan sepenuhnya pada hasil pemeriksaan 35 poin tersebut.' },
-        },
-        {
-          title: { en: 'Strict SOP', ms: 'SOP Ketat' },
-          desc: { en: 'We prioritize transparency. We will inform the customer of any issues, and will repair only if the customer agrees.', ms: 'Kami mengutamakan ketelusan. Kami akan memaklumkan pelanggan tentang sebarang isu, dan hanya akan membaiki jika pelanggan bersetuju.' },
-        }
-      ]
-    },
+
     features: {
       en: [
         'Free 35-item checklist inspection',
@@ -495,12 +476,12 @@ export const services: Service[] = [
       },
       rows: [
         {
-          en: ['Declines Repairs ("If not accept")', 'Status: Tidak layak towing (Not eligible)', 'Not eligible for the special towing coverage.'],
-          ms: ['Tolak Pembaikan ("Jika tidak setuju")', 'Status: Tidak layak towing (Not eligible)', 'Tidak layak untuk perlindungan penundaan khas.']
-        },
-        {
           en: ['Accepts Repairs ("If accept")', 'Status: Layak towing (Eligible)', 'Azam Auto provides fast breakdown assistance to our branches with 6 months of protection (from bill date). You receive a 50% towing discount (maximum RM500).'],
           ms: ['Terima Pembaikan ("Jika setuju")', 'Status: Layak towing (Eligible)', 'Azam Auto menyediakan bantuan breakdown pantas ke cawangan kami dengan perlindungan selama 6 bulan (dari tarikh bil). Anda menerima diskaun towing 50% (maksimum RM500).']
+        },
+        {
+          en: ['Declines Repairs ("If not accept")', 'Status: Tidak layak towing (Not eligible)', 'Not eligible for the special towing coverage.'],
+          ms: ['Tolak Pembaikan ("Jika tidak setuju")', 'Status: Tidak layak towing (Not eligible)', 'Tidak layak untuk perlindungan penundaan khas.']
         }
       ]
     },

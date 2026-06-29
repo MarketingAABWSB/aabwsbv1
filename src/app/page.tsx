@@ -15,6 +15,7 @@ const homeProjects = projects;
 export default function HomePage() {
   const { lang, t } = useLang();
   const carouselRef = useRef<HTMLDivElement>(null);
+  const projectCarouselRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
 
   // Drag to scroll logic
@@ -47,6 +48,18 @@ export default function HomePage() {
   const scrollRightBtn = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: 360, behavior: 'smooth' });
+    }
+  };
+
+  const scrollProjectLeftBtn = () => {
+    if (projectCarouselRef.current) {
+      projectCarouselRef.current.scrollBy({ left: -360, behavior: 'smooth' });
+    }
+  };
+
+  const scrollProjectRightBtn = () => {
+    if (projectCarouselRef.current) {
+      projectCarouselRef.current.scrollBy({ left: 360, behavior: 'smooth' });
     }
   };
 
@@ -381,29 +394,42 @@ export default function HomePage() {
             <div className="accent-divider" />
           </div>
 
-          <StaggerContainer className={styles.branchGrid}>
-            {homeProjects.map((p) => (
-              <StaggerItem key={p.id}>
-                <Link href={`/projek/${p.slug}`} style={{ textDecoration: 'none' }}>
-                  <div className={styles.branchCard} style={{ background: 'var(--clr-bg)', cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
-                  <div className={styles.projectImageWrap}>
-                    <Image 
-                      src={p.image} 
-                      alt={p.title[lang]} 
-                      className={styles.projectImage}
-                      fill
-                    />
-                  </div>
-                  <div className={styles.branchContent}>
-                    <span className={styles.specLabel}>{p.cat[lang]}</span>
-                    <h3 className={styles.branchTitle} style={{ fontSize: '1.15rem', marginTop: '0.25rem' }}>{p.title[lang]}</h3>
-                    <p className={styles.branchDesc} style={{ marginBottom: 0 }}>{p.desc[lang]}</p>
-                  </div>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1.5rem' }}>
+            <div className={styles.carouselControls}>
+              <button onClick={scrollProjectLeftBtn} className={styles.scrollBtn} aria-label="Previous">&larr;</button>
+              <button onClick={scrollProjectRightBtn} className={styles.scrollBtn} aria-label="Next">&rarr;</button>
+            </div>
+          </div>
+
+          <div className={styles.carouselWrapper}>
+            <div 
+              className={styles.carouselTrack} 
+              ref={projectCarouselRef}
+              style={{ paddingBottom: '1rem' }}
+            >
+              {homeProjects.map((p) => (
+                <div key={p.id} className={styles.carouselSlide}>
+                  <Link href={`/projek/${p.slug}`} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+                    <div className={styles.branchCard} style={{ background: 'var(--clr-bg)', height: '100%', cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
+                      <div className={styles.projectImageWrap}>
+                        <Image 
+                          src={p.image} 
+                          alt={p.title[lang]} 
+                          className={styles.projectImage}
+                          fill
+                        />
+                      </div>
+                      <div className={styles.branchContent}>
+                        <span className={styles.specLabel}>{p.cat[lang]}</span>
+                        <h3 className={styles.branchTitle} style={{ fontSize: '1.15rem', marginTop: '0.25rem' }}>{p.title[lang]}</h3>
+                        <p className={styles.branchDesc} style={{ marginBottom: 0 }}>{p.desc[lang]}</p>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-                </Link>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+              ))}
+            </div>
+          </div>
         </AnimateIn>
       </section>
     </>

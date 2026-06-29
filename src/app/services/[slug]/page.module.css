@@ -7,7 +7,7 @@
   align-items: start;
 }
 
-.main { display: flex; flex-direction: column; gap: 2rem; }
+.main { display: flex; flex-direction: column; gap: 2rem; min-width: 0; }
 
 .heroImg {
   width: 100%;
@@ -240,6 +240,7 @@
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
   background: var(--clr-bg);
+  max-width: 100%;
 }
 
 .serviceTable {

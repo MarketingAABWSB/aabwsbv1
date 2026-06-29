@@ -14,6 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const isActive = (href: string) => {
     if (href === '/') {
@@ -151,13 +152,25 @@ export default function Navbar() {
           return (
             <div key={l.href} className={styles.mobileLinkGroup}>
               {isHash ? (
-                <a
-                  href={l.href}
-                  className={`${styles.mobileLink} ${isActive(l.href) ? styles.mobileActive : ''}`}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {l.label}
-                </a>
+                l.href === '/#services' ? (
+                  <button
+                    className={`${styles.mobileLink} ${isActive(l.href) ? styles.mobileActive : ''} ${styles.mobileToggleBtn}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMobileServicesOpen(!mobileServicesOpen);
+                    }}
+                  >
+                    {l.label} <span className={`${styles.arrow} ${mobileServicesOpen ? styles.arrowOpen : ''}`}>▾</span>
+                  </button>
+                ) : (
+                  <a
+                    href={l.href}
+                    className={`${styles.mobileLink} ${isActive(l.href) ? styles.mobileActive : ''}`}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {l.label}
+                  </a>
+                )
               ) : (
                 <Link
                   href={l.href}
@@ -168,7 +181,7 @@ export default function Navbar() {
                 </Link>
               )}
 
-              {l.href === '/#services' && (
+              {l.href === '/#services' && mobileServicesOpen && (
                 <div className={styles.mobileSubLinks}>
                   {services.map((s) => (
                     <Link
@@ -185,9 +198,7 @@ export default function Navbar() {
             </div>
           );
         })}
-        <div className={styles.mobileLang}>
-          <LangToggle />
-        </div>
+        {/* Removed LangToggle from mobile menu */}
       </div>
     </nav>
   );

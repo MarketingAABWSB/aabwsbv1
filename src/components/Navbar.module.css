@@ -218,7 +218,8 @@
 }
 
 .mobileOpen {
-  max-height: 600px;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
   padding: 1rem 1.5rem 1.5rem;
   border-top: 1px solid var(--clr-border);
 }
@@ -236,6 +237,22 @@
 .mobileLink:hover {
   color: var(--clr-text);
   padding-left: 0.5rem;
+}
+
+.mobileToggleBtn {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--clr-border);
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
 }
 
 .mobileLang {
