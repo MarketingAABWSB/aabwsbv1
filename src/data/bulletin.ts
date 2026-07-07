@@ -13,6 +13,27 @@ export interface BulletinPost {
 
 export const bulletinPosts: BulletinPost[] = [
   {
+    id: 2,
+    slug: 'kursus-asas-pembaikan-aircond-kenderaan',
+    title: {
+      en: 'PROGRAM UPDATE: BASIC VEHICLE AIR CONDITIONING REPAIR COURSE',
+      ms: 'KEMASKINI PROGRAM: KURSUS ASAS PEMBAIKAN AIRCOND KENDERAAN'
+    },
+    excerpt: {
+      en: 'Azam Auto remains committed to empowering automotive technical skills through the Basic Vehicle Air Conditioning Repair Course! Held intensively for 3 Days and 2 Nights at the Kubang Kerian branch, this program is implemented quarterly to produce high-quality skilled workers.',
+      ms: 'Azam Auto terus komited memperkasa kemahiran teknikal automotif melalui Kursus Asas Pembaikan Aircond Kenderaan! Berlangsung secara intensif selama 3 Hari 2 Malam di cawangan Kubang Kerian, program ini dilaksanakan pada setiap suku tahun (quarter) untuk melahirkan tenaga mahir yang berkualiti.'
+    },
+    content: {
+      en: 'Azam Auto remains committed to empowering automotive technical skills through the Basic Vehicle Air Conditioning Repair Course! Held intensively for 3 Days and 2 Nights at the Kubang Kerian branch, this program is implemented quarterly to produce high-quality skilled workers. With a registration fee as low as RM700.00, your needs are guaranteed as this fee includes free accommodation as well as food and beverage facilities (twice a day).\n\nThroughout this course, participants will master comprehensive learning modules. You will be exposed to the introduction of air conditioning system components, the use of Manifold Gauges, system inspection techniques, reassembly processes and R134a gas charging, up to real problem case simulations.\n\nTo date, our program has successfully trained 5 batches of participants coming from various states including Kelantan, Terengganu, Kedah, Johor, Perlis, and Perak. The average participant gave positive feedback on the approach of our trainers who are open and not too formal, responsive delivery methods, and effective Q&A sessions to increase knowledge. Join us for the next batch!',
+      ms: 'Azam Auto terus komited memperkasa kemahiran teknikal automotif melalui Kursus Asas Pembaikan Aircond Kenderaan! Berlangsung secara intensif selama 3 Hari 2 Malam di cawangan Kubang Kerian, program ini dilaksanakan pada setiap suku tahun (quarter) untuk melahirkan tenaga mahir yang berkualiti. Dengan yuran pendaftaran serendah RM700.00, kelengkapan anda terjamin kerana yuran ini sudah merangkumi penginapan percuma serta kemudahan makan dan minum (2 kali sehari).\n\nSepanjang kursus ini, peserta akan menguasai modul pembelajaran yang komprehensif. Anda akan didedahkan kepada pengenalan komponen sistem aircond, penggunaan Manifold Gauge, teknik pemeriksaan sistem, proses pemasangan semula dan pengecasan gas R134a, sehinggalah kepada simulasi kes masalah sebenar.\n\nSehingga kini, program kami telah berjaya melatih 5 kumpulan (batch) peserta yang hadir dari pelbagai negeri termasuk Kelantan, Terengganu, Kedah, Johor, Perlis, dan Perak. Rata-rata peserta memberikan maklum balas positif terhadap pendekatan trainer kami yang bersikap terbuka dan tidak terlalu formal, cara penyampaian yang responsif, serta sesi soal jawab yang berkesan untuk menambah ilmu pengetahuan. Sertai kami untuk kumpulan yang seterusnya!'
+    },
+    image: '/assets/buletin2.jpeg',
+    date: '2026-07-07',
+    month: 7,
+    year: 2026,
+    category: { en: 'Program Update', ms: 'Kemaskini Program' }
+  },
+  {
     id: 1,
     slug: 'kerjasama-strategik-iktbn-bachok',
     title: {
