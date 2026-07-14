@@ -201,7 +201,7 @@ export default function AboutPage() {
                 {[
                   lang === 'en' ? 'Engine Repair' : 'Pembaikan Enjin',
                   lang === 'en' ? 'Air Conditioning' : 'Penghawa Dingin',
-                  lang === 'en' ? 'Bodywork & Paint' : 'Kerja Bodi & Cat',
+                  lang === 'en' ? 'Bodywork & Paint' : 'Kerja Body & Cat',
                   lang === 'en' ? 'Gearbox' : 'Gearbox',
                   lang === 'en' ? 'Radiator' : 'Radiator',
                   lang === 'en' ? 'Electrical' : 'Elektrik',

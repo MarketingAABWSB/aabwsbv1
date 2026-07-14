@@ -41,7 +41,7 @@ const faqData = {
     },
     {
       q: 'Perlukah saya membuat temujanji?',
-      a: 'Pelanggan walk-in dialu-alukan, tetapi kami sangat mengesyorkan membuat temujanji untuk mengelakkan masa menunggu, terutamanya untuk servis besar seperti baiki enjin atau kerja bodi.',
+      a: 'Pelanggan walk-in dialu-alukan, tetapi kami sangat mengesyorkan membuat temujanji untuk mengelakkan masa menunggu, terutamanya untuk servis besar seperti baiki enjin atau kerja body.',
     },
     {
       q: 'Apakah jenis kenderaan yang anda servis?',
@@ -49,7 +49,7 @@ const faqData = {
     },
     {
       q: 'Berapa lama servis biasa mengambil masa?',
-      a: 'Servis asas biasanya mengambil masa 1–2 jam. Kerja yang lebih kompleks seperti baiki gearbox, enjin, atau bodi mungkin mengambil masa 1–3 hari bergantung pada skop kerja.',
+      a: 'Servis asas biasanya mengambil masa 1–2 jam. Kerja yang lebih kompleks seperti baiki gearbox, enjin, atau body mungkin mengambil masa 1–3 hari bergantung pada skop kerja.',
     },
     {
       q: 'Adakah anda menyediakan waranti untuk servis?',

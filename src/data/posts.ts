@@ -39,7 +39,7 @@ export const posts: Post[] = [
       ms: `<p>AZAM AUTO BODYWORKS & SERVICES (M) SDN BHD dengan bangga memperkenalkan program <strong>EKOT (Expertise Knowledge Operation Transfer)</strong>.</p>
       <p>EKOT adalah inisiatif dalaman yang direka untuk memindahkan kepakaran dan pengetahuan operasi juruteknik kanan kami secara sistematik kepada generasi seterusnya profesional automotif dalam syarikat kami.</p>
       <h2>Apakah EKOT?</h2>
-      <p>EKOT adalah program bimbingan dan latihan berstruktur di mana juruteknik kanan yang berpengalaman berkongsi pengetahuan praktikal, kemahiran diagnostik, dan amalan terbaik mereka dengan kakitangan junior. Program ini merangkumi semua bidang servis utama termasuk pembaikan enjin, kerja bodi, pendingin hawa, dan penggantian komponen.</p>
+      <p>EKOT adalah program bimbingan dan latihan berstruktur di mana juruteknik kanan yang berpengalaman berkongsi pengetahuan praktikal, kemahiran diagnostik, dan amalan terbaik mereka dengan kakitangan junior. Program ini merangkumi semua bidang servis utama termasuk pembaikan enjin, kerja body, pendingin hawa, dan penggantian komponen.</p>
       <h2>Matlamat Kami</h2>
       <ul>
         <li>Memelihara dan memindahkan kepakaran automotif selama beberapa dekad secara sistematik</li>

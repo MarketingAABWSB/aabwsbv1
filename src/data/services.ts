@@ -35,7 +35,7 @@ export const services: Service[] = [
     icon: 'engine',
     title: {
       en: 'Petrol & Diesel Repair',
-      ms: 'Pembaikkan Petrol & Diesel',
+      ms: 'Pembaikan Petrol & Diesel',
     },
     shortDesc: {
       en: 'We ensure your vehicle runs smoothly and safely, from minor engine noises to major overhauls.',

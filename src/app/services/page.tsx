@@ -58,7 +58,7 @@ export default function ServicesPage() {
           <p className={styles.heroSub}>
             {lang === 'en'
               ? 'Comprehensive automotive care — from engine diagnostics to bodywork, air conditioning, and beyond.'
-              : 'Penjagaan automotif menyeluruh — daripada diagnostik enjin hingga kerja bodi, penghawa dingin, dan lebih lagi.'}
+              : 'Penjagaan automotif menyeluruh — daripada diagnostik enjin hingga kerja body, penghawa dingin, dan lebih lagi.'}
           </p>
           <div className={styles.heroMeta}>
             <div className={styles.heroMetaItem}>

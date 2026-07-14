@@ -24,7 +24,7 @@ export const translations = {
     },
     heroTextRight2: {
       en: 'Your trusted partner for high-quality auto bodywork, engine care, and cooling systems.',
-      ms: 'Rakan kongsi dipercayai anda untuk hasil kerja bodi, penjagaan enjin, dan sistem penyejukan berkualiti tinggi.',
+      ms: 'Rakan kongsi dipercayai anda untuk hasil kerja body, penjagaan enjin, dan sistem penyejukan berkualiti tinggi.',
     },
     aboutLabel: { en: 'OVERVIEW', ms: 'GAMBARAN KESELURUHAN' },
     aboutTitle: { en: 'Professional Care, Backed by Experience.', ms: 'Penjagaan Profesional, Diperkukuh oleh Pengalaman.' },
@@ -86,7 +86,7 @@ export const translations = {
     goalLabel: { en: 'GOAL', ms: 'MATLAMAT' },
     goalText: {
       en: 'Moving towards a structured service, corporate & professional management.',
-      ms: 'Menuju kearah struktur perkhidmatan, pengurusan korporat & profesional.',
+      ms: 'Menuju ke arah struktur perkhidmatan, pengurusan korporat & profesional.',
     },
   },
 
@@ -182,7 +182,7 @@ export const translations = {
     followUs: { en: 'Follow Us', ms: 'Ikuti Kami' },
     footerSubtitle: {
       en: 'Cooling Specialists & Auto Bodywork Experts',
-      ms: 'Pakar Penyejukan & Hasil Kerja Bodi Kenderaan Anda',
+      ms: 'Pakar Penyejukan & Hasil Kerja Body Kenderaan Anda',
     },
   },
 } as const;

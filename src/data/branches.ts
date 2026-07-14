@@ -116,15 +116,15 @@ export const branches: Branch[] = [
     specialists: [
       { en: 'Repair & Paint Mechanic - 4', ms: 'Mekanik Pembaikan & Pengecatan - 4' },
     ],
-    pic: 'MOHD FIRDAUS BIN MOHD SHUKOR NO',
+    pic: 'MOHD FIRDAUS BIN MOHD SHUKOR',
     picPhone: '60193135863',
     mapUrl: 'https://maps.app.goo.gl/rG2a9wvnVyzL4pHC6',
     image: '/assets/caw-kubang-kerian-bodywork.png',
     waLink: 'https://api.whatsapp.com/send?phone=60193135863&text=Hi%20Pembaikan%20Kereta%20%26%20Cat%20Azam%20Auto%20Kubang%20Kerian.%0A%0AUntuk%20lokasi%20kami%20boleh%20tekan%20link%20di%20bawah%0A%0Ahttps%3A%2F%2Fmaps.app.goo.gl%2FrG2a9wvnVyzL4pHC6',
   },
   {
-    id: 'insuran',
-    name: 'Insuran',
+    id: 'insurans',
+    name: 'Insurans',
     desc: {
       en: 'Vehicle Insurance Specialist. Accident claims management, policy renewal and vehicle insurance advisory.',
       ms: 'Specialist Insurans kenderaan. Urusan tuntutan kemalangan, pembaharuan polisi dan khidmat nasihat insurans kenderaan',
